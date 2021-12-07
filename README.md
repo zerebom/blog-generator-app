@@ -4,7 +4,7 @@
 
 紹介blog: https://zerebom.hatenablog.com/entry/2021/12/07/082607
 
-## Instration
+## Installation
 
 ```bash
 git clone git@github.com:zerebom/blog-generator-app.git
