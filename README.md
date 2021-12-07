@@ -6,6 +6,11 @@
 
 ## Installation
 
+1. [OpenAI API](https://openai.com/api/)にユーザ登録する
+2. API keyを取得する
+3. API keyを環境変数にセットする
+4. このレポジトリをDLしてローカルホストで立ち上げる
+
 ```bash
 git clone git@github.com:zerebom/blog-generator-app.git
 cd blog-generator-app
