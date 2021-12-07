@@ -12,10 +12,10 @@ cd blog-generator-app
 python3 -m venv env
 source env/bin/activate
 pip install -r requirements.txt
-
+streamlit run streamlit_app.py
 
 ```
 
-## demo
+## Demo
 https://user-images.githubusercontent.com/38466611/144997939-4876bdbe-af19-46db-b1c7-0f09b9441693.mov
 
