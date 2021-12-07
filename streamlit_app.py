@@ -16,26 +16,26 @@ with open("./input/title_prompt.txt", mode="r") as f:
 default_params_dic = {
     "タイトル": {
         "prompt": default_title_prompt,
-        "temperature": [0.0, 1.0, 0.5],
-        "max_tokens": [16, 64, 32],
-        "top_p": [0.0, 1.0, 0.5],
-        "frequency_penalty": [0.0, 1.0, 0.5],
-        "presence_penalty": [0.0, 1.0, 0.5],
+        "temperature": [0.0, 1.0, 0.3],
+        "max_tokens": [16, 128, 96],
+        "top_p": [0.0, 1.0, 1.0],
+        "frequency_penalty": [0.0, 2.0, 0.5],
+        "presence_penalty": [0.0, 2.0, 0.0],
     },
     "本文": {
         "prompt": default_main_body_prompt,
-        "temperature": [0.0, 1.0, 0.5],
+        "temperature": [0.0, 1.0, 0.3],
         "max_tokens": [16, 512, 256],
-        "top_p": [0.0, 1.0, 0.5],
-        "frequency_penalty": [0.0, 1.0, 0.5],
-        "presence_penalty": [0.0, 1.0, 0.5],
+        "top_p": [0.0, 1.0, 1.0],
+        "frequency_penalty": [0.0, 2.0, 0.5],
+        "presence_penalty": [0.0, 2.0, 0.0],
     },
 }
 
 st.title("ブログネタだし君", anchor=None)
 
-col1, col2 = st.columns([2, 1])
-with col1:
+right_col, left_col = st.columns([2, 1])
+with right_col:
     task_type = st.radio(
         "生成したいコンテンツの種類を選択してください",
         ["タイトル", "本文"],
@@ -50,7 +50,7 @@ with col1:
         height=300,
     )
 
-with col2:
+with left_col:
     param_val_dic = {}
     for param in [
         "temperature",
